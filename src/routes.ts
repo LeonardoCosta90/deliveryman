@@ -1,11 +1,10 @@
-import { Router } from "express";
-import { CreateClientController } from "./modules/clients/useCases/createClient/createClientController";
+import { Router } from 'express';
+import { CreateClientController } from './modules/clients/useCases/createClient/createClientController';
 
-const routes = Router()
+const routes = Router();
 
 const createClientController = new CreateClientController();
 
-routes.post("/client", createClientController.handle);
+routes.post('/client', createClientController.handle);
 
 export { routes };
-
