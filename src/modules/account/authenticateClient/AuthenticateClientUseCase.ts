@@ -24,7 +24,7 @@ export class AuthenticateUserUseCase {
       throw new Error('Username or password invalid');
     }
 
-    const token = sign({ username }, String(process.env.JWT_SECRET), {
+    const token = sign({ username }, String(process.env.JWT_SECRET_CLIENT), {
       subject: client.id,
       expiresIn: '1d',
     });

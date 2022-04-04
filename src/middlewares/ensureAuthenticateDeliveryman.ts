@@ -4,7 +4,7 @@ import { verify } from 'jsonwebtoken';
 interface IPayload {
   sub: string;
 }
-export async function ensureAuthenticateClient(
+export async function ensureAuthenticateDeliveryman(
   req: Request,
   res: Response,
   next: NextFunction,
@@ -22,10 +22,10 @@ export async function ensureAuthenticateClient(
   try {
     const { sub } = verify(
       token,
-      String(process.env.JWT_SECRET_CLIENT),
+      String(process.env.JWT_SECRET_DELIVERYMAN),
     ) as IPayload;
 
-    req.id_client = sub;
+    req.id_deliveryman = sub;
 
     return next();
   } catch (err) {
