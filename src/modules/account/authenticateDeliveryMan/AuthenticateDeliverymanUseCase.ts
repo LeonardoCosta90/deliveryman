@@ -24,10 +24,14 @@ export class AuthenticateDeliverymanUseCase {
       throw new Error('Username or password invalid');
     }
 
-    const token = sign({ username }, '019acc25a4e242bb55ad489832ada12d', {
-      subject: deliveryman.id,
-      expiresIn: '1d',
-    });
+    const token = sign(
+      { username },
+      String(process.env.JWT_SECRET_DELIVERYMAN),
+      {
+        subject: deliveryman.id,
+        expiresIn: '1d',
+      },
+    );
 
     return token;
   }
