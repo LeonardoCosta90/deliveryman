@@ -34,7 +34,7 @@ A aplicação pode ser acessada em [`localhost:3000`](http://localhost:3000).
 
 ## 📄 Licença
 
-Esse projeto está sob a licença MIT. Acesse[LICENSE](LICENSE.md) para mais detalhes
+Esse projeto está sob a licença MIT. Acesse [LICENSE](LICENSE.md) para mais detalhes
 
 ---
 
